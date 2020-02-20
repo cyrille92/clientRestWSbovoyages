@@ -1,6 +1,8 @@
-package fr.gtm.pojo;
+package fr.gtm.entities;
 
-public class Voyage {
+import java.io.Serializable;
+
+public class Voyage implements Serializable {
 	
 private long id ;
 	
@@ -14,9 +16,8 @@ private long id ;
 	public Voyage() {
 		
 	}
-	public Voyage(long id, String region, String descriptif, Client client, DatesVoyage ddv) {
-		super();
-		this.id = id;
+	public Voyage(String region, String descriptif, Client client, DatesVoyage ddv) {
+		
 		this.region = region;
 		this.descriptif = descriptif;
 		this.client = client;
@@ -57,8 +58,4 @@ private long id ;
 		return "Voyage [id=" + id + ", region=" + region + ", descriptif=" + descriptif + ", client=" + client
 				+ ", ddv=" + ddv + "]";
 	}
-
-	
-	
-
 }

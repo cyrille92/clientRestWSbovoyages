@@ -1,14 +1,14 @@
-package fr.gtm.pojo;
+package fr.gtm.entities;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Voyageur {
+public class Voyageur implements Serializable {
 	
 	private long id ;
 	private String civilite ;
 	private String nom ;
 	private String prenom ;
-
 	private LocalDate dateNaissance ;
 	
 	public Voyageur () {
@@ -16,7 +16,7 @@ public class Voyageur {
 	}
 
 	public Voyageur(String civilite, String nom, String prenom, LocalDate dateNaissance) {
-		super();
+		
 		this.civilite = civilite;
 		this.nom = nom;
 		this.prenom = prenom;

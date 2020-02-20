@@ -1,6 +1,8 @@
-package fr.gtm.pojo;
+package fr.gtm.entities;
 
-public class Client {
+import java.io.Serializable;
+
+public class Client implements Serializable{
 	
 	private long id ;
 	private String nom ;
@@ -9,9 +11,8 @@ public class Client {
 		
 	}
 	
-	public Client(long id, String nom) {
-		super();
-		this.id = id;
+	public Client(String nom) {
+
 		this.nom = nom;
 	}
 

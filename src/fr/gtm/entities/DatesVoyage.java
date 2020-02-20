@@ -1,4 +1,4 @@
-package fr.gtm.pojo;
+package fr.gtm.entities;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -8,11 +8,8 @@ public class DatesVoyage implements Serializable{
 	
 	
 	private long id ;
-	
 	private LocalDate dateAller ;
-
 	private LocalDate dateRetour ;
-	
 	private int nbPlaces ;
 	private double prixHT ;
 		

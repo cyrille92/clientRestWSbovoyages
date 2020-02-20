@@ -9,7 +9,8 @@ import javax.ws.rs.core.MediaType;
 
 import org.junit.Test;
 
-import fr.gtm.pojo.Destination;
+import fr.gtm.entities.DatesVoyage;
+import fr.gtm.entities.Destination;
 
 
 public class TestDestinationService {
@@ -32,10 +33,25 @@ public class TestDestinationService {
 	public void testGetAllRegion() {
 
 		WebTarget target = client.target(url + "/Allregion") ;
-		Destination[] destination = target.request(MediaType.APPLICATION_JSON).
-				get(Destination[].class) ;
+		String[] regions = target.request(MediaType.APPLICATION_JSON).
+				get(String[].class) ;
+		for(String r : regions)
+		assertNotNull(r);	
 		
-		assertNotNull(destination);	
+	}
+	@Test
+	public void testDatesVoyagesByDestination () {
+		WebTarget target = client.target(url + "/dvbydestination/1") ;
+		DatesVoyage[] dates = target.request(MediaType.APPLICATION_JSON)
+							.get(DatesVoyage[].class) ;
+		for (DatesVoyage d : dates )
+		{
+				assertNotNull(d);
+				
+		}
+			
+							
+		
 		
 	}
 	
