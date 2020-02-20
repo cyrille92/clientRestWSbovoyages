@@ -15,25 +15,16 @@ public class Destination implements Serializable{
 		
 	}
 
-
-	
-	
-	
-	public Destination(String description, String region, List<DatesVoyage> datesVoyages) {
+	public Destination(String region, String description, List<DatesVoyage> datesVoyages) {
 		super();
 		this.description = description;
 		this.region = region;
 		this.datesVoyages = datesVoyages;
 	}
 
-
-
-
-
 	public long getId() {
 		return id;
 	}
-
 
 	public void setId(long id) {
 		this.id = id;
@@ -66,24 +57,13 @@ public class Destination implements Serializable{
 		return datesVoyages;
 	}
 
-
-
-
-
 	public void setDatesVoyages(List<DatesVoyage> datesVoyages) {
 		this.datesVoyages = datesVoyages;
 	}
-
-
-
-
 
 	@Override
 	public String toString() {
 		return "Destination [id=" + id + ", description=" + description + ", region=" + region + "]";
 	}
-	
-	
-	
 	
 }

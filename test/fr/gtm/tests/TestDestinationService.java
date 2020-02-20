@@ -47,17 +47,6 @@ public class TestDestinationService {
 		for (DatesVoyage d : dates )
 		{
 				assertNotNull(d);
-				
-		}
-			
-							
-		
-		
+				}
+				}
 	}
-	
-
-}
-	
-	
-	
-	

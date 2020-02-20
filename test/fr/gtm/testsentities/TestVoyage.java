@@ -11,7 +11,7 @@ import fr.gtm.entities.Client;
 import fr.gtm.entities.DatesVoyage;
 import fr.gtm.entities.Voyage;
 
-public class TestVoyaye {
+public class TestVoyage {
 	
 	private Client client = new Client("Thomas") ;	
 	
